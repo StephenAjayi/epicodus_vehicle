@@ -11,6 +11,6 @@ class Vehicle
 
   define_method(:worth_buying?) do
     american_brands = ["Ford", "Chrysler", "GM"]
-    american_brands.include?(@make).&(self.age().<(16))
+    american_brands.include?(@make).&(age().<(16))
   end
 end
