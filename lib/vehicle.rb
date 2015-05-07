@@ -8,9 +8,9 @@ class Vehicle
     current_year = Time.new().year()
     current_year.-(@year)
   end
-  define_method(:worth_buying) do
-    false
-    #american_made = ["Ford", "Chevy",]
-  end
 
+  define_method(:worth_buying?) do
+    american_brands = ["Ford", "Chrysler", "GM"]
+    american_brands.include?(@make).&(self.age().<(16))
+  end
 end
